@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
 import { FaLaptopCode, FaMobileAlt, FaCogs, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Portfolio = () => {
@@ -7,19 +8,90 @@ const Portfolio = () => {
     <div className="portfolio bg-gradient min-vh-100 text-black" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 shadow-sm sticky-top">
         <a className="navbar-brand" href="#">Yash Thakkar</a>
-        <div className="navbar-nav ms-auto">
-          <a className="nav-link" href="#services">Services</a>
-          <a className="nav-link" href="#contact">Contact</a>
-          <a className="nav-link" href="#about">About Me</a>
-          <a className="nav-link" href="#feedback">Feedback</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="navbar-nav ms-auto">
+            <a className="nav-link" href="#services">Services</a>
+            <a className="nav-link" href="#contact">Contact</a>
+            <a className="nav-link" href="#about">About Me</a>
+            <a className="nav-link" href="#experience">Experience & Skills</a>
+            <a className="nav-link" href="#feedback">Feedback</a>
+          </div>
         </div>
       </nav>
 
+      {/* Hero Section */}
       <header className="hero-section text-center py-5 bg-dark text-light">
         <h1 className="display-4 fw-bold">I'm Yash Thakkar</h1>
         <p className="lead">Freelance Web & App Developer</p>
       </header>
 
+      {/* Experience & Skills Section */}
+      <section id="experience" className="py-5 bg-light text-dark">
+        <div className="container">
+          <h2 className="text-center mb-4">Experience & Skills</h2>
+
+          {/* Skills Progress Bars (Score Slider) */}
+          
+          {/* Skills & Experience Slider (Carousel) */}
+          <div id="skillsSlider" className="carousel slide mt-4" data-bs-ride="carousel">
+            <div className="carousel-inner">
+              {/* Experience Slide */}
+              <div className="carousel-item active">
+                <div className="d-flex justify-content-center align-items-center">
+                  <div className="text-center">
+                    <h3>1 Year of Experience</h3>
+                    <p>I have 1 year of experience working as a web and app developer, focusing on front-end development and mobile app creation.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Skill Slide 1: HTML, CSS, Bootstrap */}
+              <div className="carousel-item">
+                <div className="d-flex justify-content-center align-items-center">
+                  <div className="text-center">
+                    <h3>Strong in HTML, CSS & Bootstrap</h3>
+                    <p>Proficient in HTML, CSS, and Bootstrap, creating responsive, accessible, and visually appealing websites.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Skill Slide 2: Android Development */}
+              <div className="carousel-item">
+                <div className="d-flex justify-content-center align-items-center">
+                  <div className="text-center">
+                    <h3>Android App Development</h3>
+                    <p>Experienced in Android app development, including building scalable and user-friendly mobile applications.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Skill Slide 3: JavaScript */}
+              <div className="carousel-item">
+                <div className="d-flex justify-content-center align-items-center">
+                  <div className="text-center">
+                    <h3>JavaScript Knowledge</h3>
+                    <p>Good knowledge of JavaScript, enabling dynamic interactions and improved user experiences on websites and apps.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Slider Controls */}
+            <button className="carousel-control-prev" type="button" data-bs-target="#skillsSlider" data-bs-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#skillsSlider" data-bs-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
       <section id="services" className="py-5 bg-light text-dark">
         <div className="container">
           <h2 className="text-center mb-4">Services</h2>
@@ -39,44 +111,26 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section id="tech-images" className="py-5 bg-light text-dark">
-        <div className="container">
-          <h2 className="text-center mb-4">Technologies I Use</h2>
-          <div className="row text-center g-4">
-            <div className="col-md-3">
-              <img src="https://t3.ftcdn.net/jpg/02/14/53/92/360_F_214539232_YnUrtuwUEt84gHuU0qG8l7OwZvH4rnPG.jpg" alt="Web Development" className="img-fluid tech-image" />
+      {/* About Me Section */}
+      <section id="about" className="py-5 bg-light text-dark border-top">
+        <div className="container d-md-flex align-items-center flex-column flex-md-row">
+          <img
+              src="profile.jpg" 
+              alt="Yash Thakkar"
+              className="rounded-circle shadow-lg mb-4 mb-md-0 me-md-5 about-img"
+              style={{ maxWidth: '200px', maxHeight: '200px', objectFit: 'cover' }}
+            />
+            <div className="text-center text-md-start">
+              <h2>About Me</h2>
+              <p>
+                I’m Yash Thakkar, a freelance developer passionate about creating seamless digital experiences with modern designs.
+                I specialize in Odoo, .NET, and Android app development, delivering top-quality solutions for businesses.
+              </p>
             </div>
-            <div className="col-md-3">
-              <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg" alt="App Development" className="img-fluid tech-image" />
-            </div>
-            <div className="col-md-3">
-              <img src="https://www.ksolves.com/wp-content/uploads/2024/04/odoo-dev-banner.svg" alt="Odoo" className="img-fluid tech-image" />
-            </div>
-            <div className="col-md-3">
-              <img src="https://www.shutterstock.com/image-photo/new-york-usa-july-2-600nw-1137339098.jpg" alt="Android Development" className="img-fluid tech-image" />
-            </div>
-          </div>
         </div>
       </section>
 
-      <section id="about" className="py-5 bg-light text-dark border-top">
-  <div className="container d-md-flex align-items-center">
-  <img
-      src="profile.jpg" 
-      alt="Yash Thakkar"
-      className="rounded-circle shadow-lg mb-4 mb-md-0 me-md-5 about-img"
-    />
-    <div>
-      <h2>About Me</h2>
-      <p>
-        I’m Yash Thakkar, a freelance developer passionate about creating seamless digital experiences with modern designs.
-        I specialize in Odoo, .NET, and Android app development, delivering top-quality solutions for businesses.
-      </p>
-    </div>
-  </div>
-</section>
-
-
+      {/* Contact Section */}
       <section id="contact" className="py-5 bg-dark text-light border-top">
         <div className="container text-center">
           <h2>Contact Me</h2>
@@ -88,6 +142,7 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Feedback Section */}
       <section id="feedback" className="py-5 bg-secondary text-light border-top">
         <div className="container w-50">
           <h2 className="text-center mb-4">Feedback</h2>
@@ -109,6 +164,7 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="bg-dark text-center text-light py-3">
         <p>© 2025 Yash Thakkar. All Rights Reserved.</p>
       </footer>
