@@ -1,13 +1,102 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-gradient {
+  background: linear-gradient(to right, #333, #555);
 }
+
+.portfolio {
+  min-height: 100vh;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.hero-section {
+  padding: 5rem 0;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+}
+
+.btn {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.rounded-circle {
+  width: 150px;
+  height: 150px;
+}
+
+.border-top {
+  border-top: 1px solid #ddd;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.tech-image {
+  width: 100%;
+  height: 200px;  /* Fixed height for consistency */
+  object-fit: cover;  /* Ensure images maintain aspect ratio */
+  border-radius: 10px;  /* Optional: rounded corners for better appearance */
+  transition: all 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Hover effect: Add box shadow when hovering over images */
+.tech-image:hover {
+  transform: scale(1.05);  /* Slight zoom effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Box shadow for hover */
+}
+/* Styles for the service boxes */
+.service-box {
+  transition: background-color 0.3s ease;  /* Smooth transition for background color */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.service-box:hover {
+  background-color: #007bff;  /* Change only the background color on hover */
+}
+
+.service-box .service-box-icon {
+  color: #007bff;
+  transition: color 0.3s ease;  /* Smooth transition for icon color */
+}
+
+/* Optional: If you want to change the text color of the title and paragraph when hovered */
+.service-box:hover h5,
+.service-box:hover p {
+  color: blue;  /* Optional: change the text color to white */
+}
+/* Resize the image in About Me section */
+.about-img {
+  width: 200px; /* Set initial width */
+  height: 200px; /* Set height to maintain the aspect ratio */
+  object-fit: cover; /* Ensures the image is cropped to fit */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 150px; /* Adjust size for smaller screens */
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    width: 120px; /* Adjust size for very small screens */
+    height: 120px;
+  }
+}
+
+
